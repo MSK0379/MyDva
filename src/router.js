@@ -7,8 +7,11 @@
 import React from 'react';
 import { Router, Route, Switch } from 'dva/router';
 import Products from './routes/Products';
+import { getRouterData } from './config/router';
 
-function RouterConfig({ history }) {
+function RouterConfig({ history, app }) {
+  
+  const routerData = getRouterData(app);
   return (
     <Router history={history}>
       <Switch>
